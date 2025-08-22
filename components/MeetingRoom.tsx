@@ -23,6 +23,8 @@ import Loader from './Loader';
 import EndCallButton from './EndCallButton';
 import { cn } from '@/lib/utils';
 
+
+
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
 const MeetingRoom = () => {
@@ -43,7 +45,7 @@ const MeetingRoom = () => {
       case 'grid':
         return <PaginatedGridLayout />;
       case 'speaker-right':
-        return <SpeakerLayout participantsBarPosition="left" />;
+        return <SpeakerLayout  participantsBarPosition="left" />;
       default:
         return <SpeakerLayout participantsBarPosition="right" />;
     }
@@ -60,7 +62,7 @@ const MeetingRoom = () => {
             'show-block': showParticipants,
           })}
         >
-          <CallParticipantsList onClose={() => setShowParticipants(false)} />
+          <CallParticipantsList  onClose={() => setShowParticipants(false)} />
         </div>
       </div>
       {/* video layout and call controls */}
@@ -101,3 +103,7 @@ const MeetingRoom = () => {
 };
 
 export default MeetingRoom;
+
+
+
+
